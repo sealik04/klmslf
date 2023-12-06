@@ -26,12 +26,8 @@ public class PickUpScript : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
                 {
-                    //kontrola tagu
-                    if (hit.transform.gameObject.tag == "CanPickup")
-                    {
                         //pickup objektu
                         PickUpObject(hit.transform.gameObject);
-                    }
                 }
             }
             else
