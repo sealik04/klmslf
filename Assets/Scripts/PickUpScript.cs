@@ -7,7 +7,7 @@ public class PickUpScript : MonoBehaviour
     public GameObject player;
     public Transform holdPos;
     public float throwForce = 500f; //sílá hodu objektu
-    public float pickUpRange = 5f; //délka ze které může hráč vzít předmět
+    public float pickUpRange = 10f; //délka ze které může hráč vzít předmět
     private GameObject heldObj; //objekt, který hráč zvedne
     private Rigidbody heldObjRb; //rigidbody toho objektu
     private int LayerNumber; //layer index

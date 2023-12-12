@@ -29,34 +29,17 @@ public class HealthController : MonoBehaviour
    {
       if(isDead) return;
 
-      currHealth = currHealth - damage;
+      currHealth -= damage;
       Debug.Log(currHealth);
 
       if (currHealth <= 0)
       {
          currHealth = 0;
          isDead = true;
-         meshRenderer.enabled = false;
          healthPanel.SetActive(false);
-
-         StartCoroutine(RespawnAfterTime());
+         Destroy(gameObject);
       }
-      
       UpdateUI();
-   }
-
-   public IEnumerator RespawnAfterTime()
-   {
-      yield return new WaitForSeconds(respawnTime);
-      ResetHealth();
-   }
-
-   public void ResetHealth()
-   {
-      currHealth = maxHealth;
-      isDead = true;
-      meshRenderer.enabled = true;
-      healthPanel.SetActive(true);
    }
 
    public void UpdateUI()

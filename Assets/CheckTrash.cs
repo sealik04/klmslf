@@ -2,37 +2,27 @@ using UnityEngine;
 
 public class CheckTrash : MonoBehaviour
 {
-    public GameObject spravnyObjekt;
-    public Collider spravnyCollider;
+    public string targetTag; 
+    public int scoreValue = 10; 
 
-    void OnTriggerEnter(Collider other)
+    private int currentScore = 0;
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ontrigger enter");
-        Debug.Log("detekovaný colider: " +other.name);
-        
-        if (other.gameObject == spravnyObjekt)
+        if (other.CompareTag(targetTag))
         {
-            Debug.Log("object detected");
-            
-            if (other.GetComponent<Collider>() == spravnyCollider)
-            {
-                Debug.Log("jupijej");
-            }
-            else
-            {
-                Debug.Log("špatný collider");
-                Debug.Log("proč kurva");
-            }
+            Debug.Log("Correct object entered the collider: " + other.name);
+            IncreaseScore();
         }
         else
         {
-            Debug.Log("idk");
+            Debug.Log("Incorrect object entered the collider: " + other.name);
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void IncreaseScore()
     {
-        Debug.Log("left ontrigger");
-        
+        currentScore += scoreValue;
+        Debug.Log("Score increased! Current score: " + currentScore);
     }
 }
