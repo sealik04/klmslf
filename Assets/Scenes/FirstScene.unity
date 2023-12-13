@@ -14603,6 +14603,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2527593868445175469, guid: d72675001058340e8a1d218ad20db318, type: 3}
+      propertyPath: pickUpRange
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3387511663178069448, guid: d72675001058340e8a1d218ad20db318, type: 3}
       propertyPath: m_Name
       value: FPP
