@@ -8,6 +8,7 @@ TagManager:
   - PlastovaChujovina
   - Enemy
   - Metal
+  - Paper
   layers:
   - Default
   - TransparentFX
