@@ -35,15 +35,6 @@ public class PickUpScript : MonoBehaviour
                     DropObject();
             }
         }
-        if (heldObj != null) 
-        {
-            MoveObject(); 
-            if (Input.GetKeyDown(KeyCode.Mouse0)) //bind na levé myšítko, hození objektu, který hráč drží
-            {
-                ThrowObject();
-            }
-
-        }
     }
     void PickUpObject(GameObject pickUpObj)//pickup objektu
     {
@@ -70,15 +61,5 @@ public class PickUpScript : MonoBehaviour
         //objekt, který hráč drží je v empty objektu, takže je neustále v jedné statické pozici
         heldObj.transform.position = holdPos.transform.position;
     }
-    void ThrowObject() //zahození objektu
-    {
-        //stejná funkce jako DropObject, ale je k tomu přidaný Force, takže se objekt zahodí
-        Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-        heldObj.layer = 0;
-        heldObjRb.isKinematic = false;
-        heldObj.transform.parent = null;
-        heldObjRb.AddForce(transform.forward * throwForce);
-        heldObj = null;
-    }
-    
+
 }
