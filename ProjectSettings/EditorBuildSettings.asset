@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondScene.unity
     guid: 43504468406034f50adc7028ed8c777e
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 34ed4cda332a5474f86231ed1e5f1457
+  - enabled: 1
+    path: Assets/Scenes/chooselevel.unity
+    guid: ff5ca7b47cfa91940b80590eb6a5ec95
   m_configObjects: {}

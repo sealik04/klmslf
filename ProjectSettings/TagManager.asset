@@ -12,6 +12,7 @@ TagManager:
   - Radio
   - PlastovaChujovina
   - Glass
+  - weapon
   layers:
   - Default
   - TransparentFX
